@@ -5,6 +5,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import NotFound from './Components/NotFound';
 import BrowseBook from './Components/BrowseBook';
 import Home from './Components/Home';
+import AddBook from './Components/AddBook';
+import BookDetails from './Components/BookDetails';
 
 const appRouter = createBrowserRouter([
   {
@@ -20,8 +22,16 @@ const appRouter = createBrowserRouter([
         element: <BrowseBook/>
       },
       {
-        path:"/book/:genre",
+        path:"/browsebook/:genre",
         element: <BrowseBook/>
+      },
+      {
+        path: "/addbook",
+        element:<AddBook/>
+      },
+      {
+        path:"/bookdetails/:id",
+        element:<BookDetails/>
       }
     ],
     errorElement: <NotFound/>

@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { addBook } from '../redux/actions/booksActions';
+import { addBook } from '../utilis/bookSlice';
+
 
 function AddBook() {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [description, setDescription] = useState('');
   const [rating, setRating] = useState('');
+  const [genre, setGenre] = useState('')
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!title || !author || !description || !rating) {
+    if (!title || !author || !description || !rating || !genre) {
       alert('Please fill in all fields');
       return;
     }
@@ -25,11 +27,11 @@ function AddBook() {
       author,
       description,
       rating: parseInt(rating),
-      category: 'Fiction', // Default category or allow selection
+      category: genre, // Default category or allow selection
     };
 
     dispatch(addBook(newBook));
-    navigate('/browse-books');
+    navigate('/browsebook');
   };
 
   return (
@@ -46,6 +48,12 @@ function AddBook() {
         placeholder="Author"
         value={author}
         onChange={(e) => setAuthor(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Genre"
+        value={genre}
+        onChange={(e) => setGenre(e.target.value)}
       />
       <textarea
         placeholder="Description"

@@ -8,11 +8,11 @@ function Home() {
       <Navbar/>
       <h1>Welcome to the Book Library</h1>
       <ul>
-        <li><Link to="/book/fic">Fiction</Link></li>
-        <li><Link to="/book/non-fic">Non-Fic</Link></li>
-        <li><Link to="/book/sci-fi">Sci-Fi</Link></li>
-        <li><Link to="/book/romance">Romance</Link></li>
-        <li><Link to="/book/thriller">Thriller</Link></li>
+        <li><Link to="/browsebook/fic">Fiction</Link></li>
+        <li><Link to="/browsebook/non-fic">Non-Fic</Link></li>
+        <li><Link to="/browsebook/sci-fi">Sci-Fi</Link></li>
+        <li><Link to="/browsebook/romance">Romance</Link></li>
+        <li><Link to="/browsebook/thriller">Thriller</Link></li>
       </ul>
       <h2>Popular Books</h2>
       <ul>

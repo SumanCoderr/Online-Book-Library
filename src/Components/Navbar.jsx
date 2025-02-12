@@ -5,8 +5,8 @@ function Navbar() {
   return (
     <nav>
       <Link to="/">Home</Link>
-      <Link to="/browse-books">Browse Books</Link>
-      <Link to="/add-book">Add Book</Link>
+      <Link to="/browsebook">Browse Books</Link>
+      <Link to="/addbook">Add Book</Link>
     </nav>
   );
 }
